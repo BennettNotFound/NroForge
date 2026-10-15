@@ -1,0 +1,420 @@
+{
+  "version": "2026.10.15",
+  "archive": "vendor/nroforge-sdk-2026.10.15.tar.xz",
+  "sha256": "c5808137b64976c375b1c343fdbb7ffe13c8a6736734f8f45f078db140343e47",
+  "archive_root": "NS-Toolchain-Runner-Minimal-20261015",
+  "host": "linux-x86_64",
+  "container": "devkitpro/devkita64:20260219",
+  "gcc": "15.2.0",
+  "libnx": "4.12.0",
+  "dotnet_sdk": "9.0.102",
+  "runtime_commit": "289cdaa5d288809891e3e2fbac82cd6e0cdcfcd7",
+  "mono_nx_commit": "285b277de16711344126cd90c2a21cfbd0d5d714",
+  "sdl_commit": "b4c300c07924b4aea3930792cbc013d3d18374ea",
+  "sdl_version": "3.2.27",
+  "mesa_commit": "606441c90e459028a50fca352daebfc20211f890",
+  "mesa_version": "26.2.4",
+  "rust_nightly": "2026-10-07",
+  "parts": [
+    {
+      "path": "vendor/sdk/nroforge-sdk.000.part",
+      "bytes": 700000,
+      "sha256": "f0c52cbdfeb4eed9fa2df6ec04c16df79b26557131c8b306b80ce12c22fce83d"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.001.part",
+      "bytes": 700000,
+      "sha256": "e7f8d88207b2b4963c4b802941a35cd61c40b8ff5fa2e54c0fd0b7ff28330cfb"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.002.part",
+      "bytes": 700000,
+      "sha256": "f06bf7aa8aec0224be08e54fa4cf2629c43e2e68002d2e74da7ed5b1e22d172e"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.003.part",
+      "bytes": 700000,
+      "sha256": "5ceaedbf8a93c63ad570be13286584a8b08e75b077ec2a6c9b7205e7a8cabd76"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.004.part",
+      "bytes": 700000,
+      "sha256": "8bc76c9d93021d25ca5ef245ffd3fc1ac80a1fb405c1a6ceed696ed0c242768d"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.005.part",
+      "bytes": 700000,
+      "sha256": "a1ec7f634294c30b6dfd320424aa8a058778c8783811bb06cab742c5148c1af6"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.006.part",
+      "bytes": 700000,
+      "sha256": "cfaa21a50737e2d84a2e3cbf1b1ffb74856f43149ceaaa8c9c39a6b5e5678227"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.007.part",
+      "bytes": 700000,
+      "sha256": "59926970197e396ea490983eb09ce39e811145f6d3f95e16935aab3d7b7ed976"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.008.part",
+      "bytes": 700000,
+      "sha256": "fed7bad7b9b4a23d96aaa28e759a449c992711f14e5cc4a88cbd895b280b29e3"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.009.part",
+      "bytes": 700000,
+      "sha256": "25b1688a73d75af0bfd5b253887a43fa7cce266b5302de1b753597d787cd59cf"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.010.part",
+      "bytes": 700000,
+      "sha256": "93c1908aabb8ca290d16483e4289485fe414e812f5a05a7e62c83ef91b6ce320"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.011.part",
+      "bytes": 700000,
+      "sha256": "7377d373296dd7d72be20379c05592789206c40819d4144a7f4206a9fe4e330a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.012.part",
+      "bytes": 700000,
+      "sha256": "97c7436402f2874d45e5031ae57988cdec4ed261b43087285a553664e245e74d"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.013.part",
+      "bytes": 700000,
+      "sha256": "5c6eeb8de07997c6ae118d094730ef7adc22b21467f430c625d7e9de3499ee8e"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.014.part",
+      "bytes": 700000,
+      "sha256": "03c91dca419bb8baae99174fb2f08ecfdd9a4a2c931cd1258556ee2751558e34"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.015.part",
+      "bytes": 700000,
+      "sha256": "ca2fe76343bd7c38e2ecb4de7497141f4316d6b99272d6f68c0b8c2389da3e74"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.016.part",
+      "bytes": 700000,
+      "sha256": "33a6ef041a765cdfcb055d585f61b7f1cd11c217bdad4ae6e8d1e4cc0e68b8f8"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.017.part",
+      "bytes": 700000,
+      "sha256": "4d84ac2250314146e21e9ceef98a52766a3d568b456c5e445de6def13712df1b"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.018.part",
+      "bytes": 700000,
+      "sha256": "220fb82d9244c8186773bc583379eeec0edf0fbca113e6e4c6efcc4aa3516340"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.019.part",
+      "bytes": 700000,
+      "sha256": "6b0e48345b1a81233ebc0af8a417c8e5af7e1cf38b6ffee363bd217b03e670db"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.020.part",
+      "bytes": 700000,
+      "sha256": "e6e817333d78a45752ac39d47348299ed3a43d7d512b07d61d7df4a91958a5b2"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.021.part",
+      "bytes": 700000,
+      "sha256": "47d0bc10946a8b33dab1c25a5c6c647a03e21d3131a518db1104af9adbff98f0"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.022.part",
+      "bytes": 700000,
+      "sha256": "c7a80bf959c8bffac85c8b851416efc0029e163de60fbe400f3a0d979029333a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.023.part",
+      "bytes": 700000,
+      "sha256": "4eec57bbda1e37320c51d8d8963c295a684ee01a0c15d10f5b752ac5d8893ddb"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.024.part",
+      "bytes": 700000,
+      "sha256": "c8051aef5b5455e6013930a53782c21d703c2c02cbd9d954afe75689c0debb93"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.025.part",
+      "bytes": 700000,
+      "sha256": "52ab0890cd518ac1cf6d5ec1545a918dec2668d28f67e20a163a56c0a0b8bc85"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.026.part",
+      "bytes": 700000,
+      "sha256": "c96e00d26e309406591beab2ddb5506f65a3c7052a5ebc6806d79f4363009528"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.027.part",
+      "bytes": 700000,
+      "sha256": "34313ba58196ad652578eb0be43b966c6763dfe03c4943a4b7369d884cfe9de6"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.028.part",
+      "bytes": 700000,
+      "sha256": "5d9966e522554b6fcc43efadecf0197ce6339a576e5e32ec67ff7bdae666d5da"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.029.part",
+      "bytes": 700000,
+      "sha256": "d9cf4365df535b7e7c0ad2fcbd81b4f2b08635132cd14add67ec3c3787e0d458"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.030.part",
+      "bytes": 700000,
+      "sha256": "97f6afd8bff53ee0a45258e77ceef8880dca9ddc8cec65e99e5d00c4610d7853"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.031.part",
+      "bytes": 700000,
+      "sha256": "1ac345174f912f0f6c0de1a3b70b254657a9aef6a97cf3c1f4f8f2a7a37cd282"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.032.part",
+      "bytes": 700000,
+      "sha256": "8247f0431250844ea08c58f5c7c37099dcd0da7061e25e694f026bcff1cedbd6"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.033.part",
+      "bytes": 700000,
+      "sha256": "2d3dca8e26b8f6bab241be640e29ecc8afe43f658e0fd1abe09f7c60a7a63e4e"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.034.part",
+      "bytes": 700000,
+      "sha256": "ba7c6080b3a90985623028501289fd4a3b2243434c074c07db851ce674a72c8e"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.035.part",
+      "bytes": 700000,
+      "sha256": "7c9392ec44f005bd73920bf7acde9111b1f4c13d6083e5ed665f46e828ca731a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.036.part",
+      "bytes": 700000,
+      "sha256": "ba572420f489a3594bb3ba95e7c35c2739b7ba3162e98f6cab370dc42ae557c5"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.037.part",
+      "bytes": 700000,
+      "sha256": "a7d6d75844467c27ff0b26d6f0f4faa9b6d5b19e684fc452f67d339b6badd32b"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.038.part",
+      "bytes": 700000,
+      "sha256": "31e1f16a241f42c3592aa23f05040c9ba0eb2c6bf196e3c749ff70896ecf9b71"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.039.part",
+      "bytes": 700000,
+      "sha256": "cd42e2b3e785d09a5f69338d80840727c51fab3b65c464ca064f8ccbdd635514"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.040.part",
+      "bytes": 700000,
+      "sha256": "691e3a5dfe4613dff75cfcf5cbcac3ffc33854a6e7938f0947e29f5b690e9c0a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.041.part",
+      "bytes": 700000,
+      "sha256": "f9561e2f4f5b0ca3a9f797123ff88fe508e17bc3cf106c02e42bf84d382da97e"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.042.part",
+      "bytes": 700000,
+      "sha256": "6548fe88dac83a488a6b248c69d0f455485505021cfde9f1452842e503132c7a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.043.part",
+      "bytes": 700000,
+      "sha256": "3dbdaac2b66588dfba12a477665046dc53593eab4b97772307cab703ffd0110a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.044.part",
+      "bytes": 700000,
+      "sha256": "67b95306164f89f9af78cf86e7afdcaff420e6b8f3a09549f7bdc9d86df7e2ae"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.045.part",
+      "bytes": 700000,
+      "sha256": "7c022203fb6ef387eb045106aa9f7b3412d5e62a08118fb99afec10e04f72b46"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.046.part",
+      "bytes": 700000,
+      "sha256": "28b6c6ae65250166f6bc2ed654fd3cd263beeb7b3b3de90eef5b45b9b3a5c427"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.047.part",
+      "bytes": 700000,
+      "sha256": "b9f20eed91f66b9e8a610b2752aa1a2c99d7489df92af3aede1be1ad0a599427"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.048.part",
+      "bytes": 700000,
+      "sha256": "70aec2bdd8001ca90d6eb661a108d9e74f7bd26bdc474c0c04fec68accba4730"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.049.part",
+      "bytes": 700000,
+      "sha256": "09962b5d76d4bde387aa4d2f24ebcf146ef838eca506007a8901491640963da9"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.050.part",
+      "bytes": 700000,
+      "sha256": "ed7225aa74cd12a140302a9dbaefaa605173677d721d8a2da4e0e724e4f90d61"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.051.part",
+      "bytes": 700000,
+      "sha256": "0e33c576f98a123cb6320068054c38e541673a8f740718bb7eea0f2870eb440c"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.052.part",
+      "bytes": 700000,
+      "sha256": "ca0edb3437baed579249d5d667744e745a517bd86854982a3794a285f9c5d476"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.053.part",
+      "bytes": 700000,
+      "sha256": "4c9f60385bc0fe7b745381c12bb085b446a775fc847f127f0776922e4605137a"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.054.part",
+      "bytes": 700000,
+      "sha256": "02596a66d6c1f6df88c0f39f075eb3a565249b4a9403473d2b44e0d8dfc06154"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.055.part",
+      "bytes": 700000,
+      "sha256": "1582f7a7e6e4f0f7abd4b2a700b00a70e0b5fe35ff6d527d1a57c6173991d63f"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.056.part",
+      "bytes": 700000,
+      "sha256": "2f534c56866c4c9c030ece2fe0b882bf698db8e0e3e361e4bb48b01d96e2a0db"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.057.part",
+      "bytes": 700000,
+      "sha256": "ceaa2850e45650bda02c1fdbe9a3824beedae431c3ac1e2c83b92bcaee2e9ff7"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.058.part",
+      "bytes": 700000,
+      "sha256": "64e4c761750583518859c41fa4ebda633d5e878188f29aee03ce3e3831537e87"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.059.part",
+      "bytes": 700000,
+      "sha256": "c78b3b83b2e276574da8e6372b469b08c4cd691844de103522af3c922e644e3d"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.060.part",
+      "bytes": 700000,
+      "sha256": "90c09cc72955e7ecc4e2e3eab791c1cd40e1631ceac1966939fa2e0a761b4a10"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.061.part",
+      "bytes": 700000,
+      "sha256": "76a8c77917ff24ac37c56cfb5244c22f89541ae4ae18b9405d2f4f43301aa7c3"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.062.part",
+      "bytes": 700000,
+      "sha256": "be7cab25260cb841499ae44fb20c3f5613662d77cf10a6edb6f1869e9680c0fd"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.063.part",
+      "bytes": 700000,
+      "sha256": "c495e3973d7e6bee6e534fbcbc5d95cc2c0d1605fb3faecfa105e69ff0524950"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.064.part",
+      "bytes": 700000,
+      "sha256": "9b91bc4d478162dcb6ba0dbee5e854bfeff7ccb9e960d03739ce46ae8a71a5c5"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.065.part",
+      "bytes": 700000,
+      "sha256": "1a1f779c1c29688de970d357b8d91cf4373163ca4d866e7b62533f8fecd72aa0"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.066.part",
+      "bytes": 700000,
+      "sha256": "b125f9238240144364dd0cfd039c078251b7a405d53e356cd560324dcaff9839"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.067.part",
+      "bytes": 700000,
+      "sha256": "c1b87cb4d99cf44e77d5d30d199747645bc94a471a0cc6c2babaa7914b23c5cf"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.068.part",
+      "bytes": 700000,
+      "sha256": "8272c63c8c0b93e945a433678cdcfaed58403a7de868736aaccedde32f3ad441"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.069.part",
+      "bytes": 700000,
+      "sha256": "f1946c59d5f70d2b25204befa4509911f395fd1dc1fa5db31af50f6ae2e17d90"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.070.part",
+      "bytes": 700000,
+      "sha256": "9f3201ed03ee3966d584253285afde643e8a1ef16f25735e29ab21192b360bf1"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.071.part",
+      "bytes": 700000,
+      "sha256": "bc52606b1c0118f64c9e5361fc923f92efce2b5ef033e636d87cbf3707142862"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.072.part",
+      "bytes": 700000,
+      "sha256": "dd3a2301456ffe2f4e2e710a68e082799212354353cc35c20d85f5227d181e66"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.073.part",
+      "bytes": 700000,
+      "sha256": "f95bcf693c7d9d2de93885cbf7108f0ce4d6cd56a1a8fcab03d26180b6a7df99"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.074.part",
+      "bytes": 700000,
+      "sha256": "2e1ba2f817c6b3b21149d56e209b1bcf79683a151a35651d5fd6573e4c280004"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.075.part",
+      "bytes": 700000,
+      "sha256": "02b842f1ceb4f444571d3590798af9a75ab1eecfce24acadb7afc26d6a6e227c"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.076.part",
+      "bytes": 700000,
+      "sha256": "f84e6cffa984b56ecabb7276ee2cd74e89a97083e4992e21ef3fe5818a78f0f2"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.077.part",
+      "bytes": 700000,
+      "sha256": "9da06f0b60b998d55cf800190e55f1922d6ec57b08164b58970af46f07291012"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.078.part",
+      "bytes": 700000,
+      "sha256": "4c62e026e7b31c12d4cf93a9eb1cd4430b6c04e26658d1f8cd562fb7f1c2c7fa"
+    },
+    {
+      "path": "vendor/sdk/nroforge-sdk.079.part",
+      "bytes": 600048,
+      "sha256": "21fb14b1452b34ceecd9d52cbc6fc45570d0647cb3a01a8ca64ceee88c643cb3"
+    }
+  ]
+}

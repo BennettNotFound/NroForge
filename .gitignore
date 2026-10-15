@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.nroforge/
+build/
+bin/
+obj/
+*.nro
+*.elf
+*.map

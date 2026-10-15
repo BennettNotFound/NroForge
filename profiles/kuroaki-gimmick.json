@@ -1,0 +1,8 @@
+{
+  "app_id": "KuroakiGimmick",
+  "entry_assembly": "KuroakiGimmick.dll",
+  "title": "Kuroaki/Gimmick",
+  "author": "vivid-stasis-revival",
+  "version": "0.1.4",
+  "launch_args": "--render-width\n640\n--language\nzh-CN\n"
+}

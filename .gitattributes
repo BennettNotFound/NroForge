@@ -1,0 +1,6 @@
+vendor/sdk/*.part -diff -text
+*.py text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.yml text eol=lf
+Makefile text eol=lf

@@ -1,0 +1,6 @@
+.git
+vendor
+.nroforge
+build
+**/bin
+**/obj

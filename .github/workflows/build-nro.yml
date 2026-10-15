@@ -1,0 +1,51 @@
+name: Reusable NRO build
+on:
+  workflow_call:
+    inputs:
+      managed-artifact:
+        type: string
+        required: true
+        description: Artifact from an earlier job containing the managed DLL closure and profile
+      profile:
+        type: string
+        default: kuroaki-gimmick
+      link-assemblies:
+        type: boolean
+        default: false
+      artifact-name:
+        type: string
+        default: switch-nro
+      nroforge-ref:
+        type: string
+        default: main
+        description: NroForge commit/tag to check out; pin this together with the called workflow
+permissions:
+  contents: read
+jobs:
+  nro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: BennettNotFound/NroForge
+          path: nroforge
+          ref: ${{ inputs.nroforge-ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.managed-artifact }}
+          path: managed
+      - uses: ./nroforge
+        id: build
+        with:
+          managed-directory: managed
+          profile: ${{ inputs.profile }}
+          link-assemblies: ${{ inputs.link-assemblies }}
+          output-directory: build/nroforge
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact-name }}
+          path: |
+            ${{ steps.build.outputs.nro }}
+            ${{ steps.build.outputs.sd-directory }}
+            build/nroforge/BUILD-INFO.json

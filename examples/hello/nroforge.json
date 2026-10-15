@@ -1,0 +1,7 @@
+{
+  "app_id": "NroForgeHello",
+  "entry_assembly": "NroForgeHello.dll",
+  "title": "NroForge Hello",
+  "author": "BennettNotFound",
+  "version": "0.1.0"
+}

@@ -1,0 +1,46 @@
+name: NroForge
+description: Build adapted .NET 9 applications as Switch NROs with LLVM Full AOT
+author: BennettNotFound
+branding:
+  icon: package
+  color: orange
+inputs:
+  managed-directory:
+    description: Workspace-relative directory containing linked DLLs or raw publish output
+    required: true
+  profile:
+    description: Built-in kuroaki-gimmick or a workspace-relative JSON profile path
+    default: kuroaki-gimmick
+  output-directory:
+    description: New workspace-relative output directory
+    default: build/nroforge
+  assets-directory:
+    description: Optional complete Assets directory, including prebaked SwitchShaders
+    default: ''
+  link-assemblies:
+    description: ILLink raw publish output using the matching bundled libnx BCL
+    default: 'false'
+  jobs:
+    description: Parallel AOT compiler processes
+    default: '2'
+outputs:
+  nro:
+    description: Absolute path to the generated NRO
+    value: ${{ steps.build.outputs.nro }}
+  sd-directory:
+    description: Absolute path to the SD staging tree
+    value: ${{ steps.build.outputs.sd-directory }}
+runs:
+  using: composite
+  steps:
+    - id: build
+      shell: bash
+      env:
+        NROFORGE_ACTION_PATH: ${{ github.action_path }}
+        NROFORGE_MANAGED: ${{ inputs.managed-directory }}
+        NROFORGE_PROFILE: ${{ inputs.profile }}
+        NROFORGE_OUTPUT: ${{ inputs.output-directory }}
+        NROFORGE_ASSETS: ${{ inputs.assets-directory }}
+        NROFORGE_LINK: ${{ inputs.link-assemblies }}
+        NROFORGE_JOBS: ${{ inputs.jobs }}
+      run: python3 "$NROFORGE_ACTION_PATH/scripts/run_action.py"
