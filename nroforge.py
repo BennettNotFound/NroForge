@@ -98,7 +98,7 @@ def build(args):
     objects = sorted((output / 'objects').glob('*.o'))
     modules = json.loads((output / 'aot-manifest.json').read_text())
     if len(objects) != len(modules) * 2:
-        raise ValueError('LLVM AOT did not produce both primary and LLVM objects for every module')
+        raise ValueError(f'Expected {len(modules) * 2} primary/LLVM objects, found {len(objects)}: ' + ', '.join(p.name for p in objects))
     symbols = subprocess.check_output(['aarch64-none-elf-nm', '-g', '--defined-only', *map(str, objects)], env=env, text=True)
     for module in modules:
         if not re.search(r'\b' + re.escape(module['symbol']) + r'\b', symbols):

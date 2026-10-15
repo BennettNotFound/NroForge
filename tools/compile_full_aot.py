@@ -48,6 +48,9 @@ def compile(file):
             '--aot=' + options + ',tool-prefix=aarch64-none-elf-,outfile=' + str(obj),
             str(file)], stdout=stream, stderr=subprocess.STDOUT)
     text = log.read_text()
+    for line in text.splitlines():
+        if any(token in line for token in ('Executing llc:', 'Output file:', 'error:', 'Error:', 'not found', 'cannot open')):
+            print(file.name + ': ' + line, flush=True)
     symbol = re.search(r"Linking symbol: '([A-Za-z0-9_]+)'", text)
     counts = re.search(r'Compiled:\s*(\d+)/(\d+)', text)
     llvm = re.search(r'LLVM:\s*(\d+)\s*\((\d+)%\)', text)
