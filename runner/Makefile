@@ -104,7 +104,7 @@ LIBS	:=  \
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= $(PORTLIBS) $(LIBNX)
+LIBDIRS	:= $(NROFORGE_SDK)/sdk/sdl3 $(NROFORGE_SDK)/sdk/mesa $(PORTLIBS) $(LIBNX)
 
 #---------------------------------------------------------------------------------
 # mono nx dl shim options
@@ -152,7 +152,8 @@ ifneq ($(strip $(KG_SWITCH_NATIVE)),)
     ifneq ($(strip $(KG_SWITCH_AOT)),)
         KG_SWITCH_AOT_NXLINK ?= 0
         CFLAGS += -DKG_SWITCH_AOT=1 -DKG_SWITCH_AOT_NXLINK=$(KG_SWITCH_AOT_NXLINK) -I$(KG_SWITCH_AOT)
-        LIBS := $(wildcard $(KG_SWITCH_AOT)/objects/*.o) $(subst libmono-component-debugger-static.a,libmono-component-debugger-stub-static.a,$(LIBS))
+        export LIBS := $(wildcard $(KG_SWITCH_AOT)/objects/*.o) $(subst libmono-component-debugger-static.a,libmono-component-debugger-stub-static.a,$(LIBS))
+        $(info [NroForge] linking $(words $(wildcard $(KG_SWITCH_AOT)/objects/*.o)) AOT objects from $(KG_SWITCH_AOT))
         ROMFS := $(KG_SWITCH_AOT)/romfs
         APP_TITLE ?= NroForge
         APP_VERSION ?= 0.1.0

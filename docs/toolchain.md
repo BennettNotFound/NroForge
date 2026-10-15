@@ -7,7 +7,7 @@
 | 组件 | 来源 |
 |---|---|
 | mono-nx / rel-3 SDK、ICU、BCL | https://github.com/exelix11/mono-nx |
-| libnx .NET runtime / LLVM 支持 | https://github.com/exelix11/runtime ，commit 见 lock |
+| libnx .NET runtime / LLVM 支持 | https://github.com/exelix11/dotnet_runtime ，commit 见 lock |
 | SDL3-Switch | https://github.com/SnepOMatic/SDL3-Switch |
 | loaderless Mesa unified SDK | https://github.com/danfromtico/mesa-switch ，原构建使用 Actions run 37623995855 |
 | Rust std | 官方 nightly 2026-10-07 / aarch64-unknown-linux-gnu |

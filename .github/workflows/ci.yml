@@ -26,9 +26,12 @@ jobs:
           link-assemblies: 'true'
           output-directory: build/hello-output
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: NroForgeHello
           path: |
             ${{ steps.nro.outputs.nro }}
             ${{ steps.nro.outputs.sd-directory }}
             build/hello-output/BUILD-INFO.json
+            build/hello-output/aot-manifest.json
+            build/hello-output/logs/

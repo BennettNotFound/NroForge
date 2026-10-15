@@ -95,10 +95,20 @@ def build(args):
     run(sys.executable, ROOT / 'tools/compile_full_aot.py', '--managed', output / 'managed',
         '--compiler', sdk / 'tools/mono-aot-cross', '--llvm-tools', sdk / 'tools/llvm/bin',
         '--output', output / 'objects', '--jobs', args.jobs, env=env)
+    objects = sorted((output / 'objects').glob('*.o'))
+    modules = json.loads((output / 'aot-manifest.json').read_text())
+    if len(objects) != len(modules) * 2:
+        raise ValueError('LLVM AOT did not produce both primary and LLVM objects for every module')
+    symbols = subprocess.check_output(['aarch64-none-elf-nm', '-g', '--defined-only', *map(str, objects)], env=env, text=True)
+    for module in modules:
+        if not re.search(r'\b' + re.escape(module['symbol']) + r'\b', symbols):
+            raise ValueError('AOT module registration symbol missing: ' + module['symbol'])
+    print(f'Validated {len(objects)} AOT objects and {len(modules)} exported registration symbols.', flush=True)
     payload = prepare(output, profile)
     runner = output / 'runner'
     shutil.copytree(ROOT / 'runner', runner)
     run('make', '-C', runner, f'KG_SWITCH_NATIVE={runner}/native', f'KG_SWITCH_AOT={output}',
+        f'NROFORGE_SDK={sdk}',
         'KG_PKG_CONFIG=pkg-config', 'MONO_NX_USE_SDL2=0', 'MONO_NX_USE_CIMGUI=0',
         f'TARGET={profile["app_id"]}', 'BUILD=build-native', 'DEFINES=-DKG_SWITCH_TLS_FIX=1',
         f'APP_TITLE={profile["title"]}', f'APP_AUTHOR={profile["author"]}', f'APP_VERSION={profile["version"]}',
