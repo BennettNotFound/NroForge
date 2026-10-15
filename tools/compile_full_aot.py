@@ -38,6 +38,9 @@ def compile(file):
         # Horizon NROs are relocated at load time. The cross compiler otherwise
         # asks llc for static relocation, which produced the broken pre-PIC build.
         options += ',llvm,llvmllc=-relocation-model=pic,llvm-path=' + str(a.llvm_tools) + '/'
+        # This mono-nx cross compiler does not derive the secondary filename
+        # from outfile; without this option every llc process writes "(null)".
+        options += ',llvm-outfile=' + str(a.output / (file.name + '-llvm.o'))
     # The runtime allocates specific call trampolines from CoreLib's pool.
     # Hardware startup exhausted the compiler's default 4096 before frame one.
     if file.name == 'System.Private.CoreLib.dll':
@@ -56,6 +59,8 @@ def compile(file):
     llvm = re.search(r'LLVM:\s*(\d+)\s*\((\d+)%\)', text)
     if result.returncode or not obj.is_file() or not symbol or not counts:
         raise RuntimeError('AOT failed for ' + file.name + '\n' + text[-3000:])
+    if a.llvm_tools and not (a.output / (file.name + '-llvm.o')).is_file():
+        raise RuntimeError('LLVM object missing for ' + file.name + '\n' + text[-3000:])
     skipped = [line for line in text.splitlines() if line.startswith('Skip (')]
     # Open generic templates need not have their own code when concrete/shared
     # instances are emitted. Do not mistake those candidates for JIT fallback.
